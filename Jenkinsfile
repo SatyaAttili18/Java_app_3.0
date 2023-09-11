@@ -79,7 +79,7 @@ pipeline{
                    dockerbuild -t javapp
                    dockerlog -u satya18 -p SatyaDocker@123
                    dockerBuild("${params.ImageName}","${params.ImageTag}","${params.DockerHubUser}")
-               }
+               }}
             }
         }
          //stage('Docker Image Scan: trivy '){

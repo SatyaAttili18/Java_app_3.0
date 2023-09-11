@@ -76,7 +76,8 @@ pipeline{
          when { expression {  params.action == 'create' } }
             steps{
                script{
-                   
+                   dockerbuild -t satya
+                   dockerlog -u satya18 -p SatyaDocker@123
                    dockerBuild("${params.ImageName}","${params.ImageTag}","${params.DockerHubUser}")
                }
             }

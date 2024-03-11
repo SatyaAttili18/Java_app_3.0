@@ -83,7 +83,7 @@ pipeline{
             steps{
                script{
                    
-                   dockerImageScan("${params.ImageName}","${params.ImageTag}","${params.DockerHubUser}")
+                   dockerImageScan image: 'javapp', tag: 'v1'
                }
             }
         }

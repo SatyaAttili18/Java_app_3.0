@@ -110,3 +110,17 @@ pipeline{
         }      
     }
 }
+def mvnTest() {
+    // Implement Maven test steps here
+    sh 'mvn clean test'
+}
+
+def mvnIntegrationTest() {
+    // Implement Maven integration test steps here
+    sh 'mvn clean verify'
+}
+
+def mvnBuild() {
+    // Implement Maven build steps here
+    sh 'mvn clean install'
+}
